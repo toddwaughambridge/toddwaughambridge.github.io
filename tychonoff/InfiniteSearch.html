@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html><head><meta charset="utf-8"><title>Search over uniformly continuous decidable predicates on infinite collections of types</title>
+<link rel="stylesheet" href="Agda.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+<script src="collapsescript.js"></script>
+</head>
+<body>
+<h1
+id="search-over-uniformly-continuous-decidable-predicates-on-infinite-collections-of-types">Search
+over uniformly continuous decidable predicates on infinite collections
+of types</h1>
+<p>Todd Waugh Ambridge, 15th December 2021 and 1st February 2022</p>
+<p>I explore, in the following two blog posts, two key concepts:
+searchable types and closeness functions.</p>
+<ul>
+<li><a href="InfiniteSearch1.html">Please click here to read Part
+I.</a></li>
+<li><a href="InfiniteSearch2.html">Please click here to read Part
+II.</a></li>
+</ul>
+<p>The blog posts are written in literate Agda, meaning that everything
+is both explained in text and fully-foramlised in Agda. I use Martín
+Escardó’s Agda library <a
+href="https://www.cs.bham.ac.uk/~mhe/agda-new/">TypeTopology</a> as a
+framework.</p>
+<h2 id="introduction">Introduction</h2>
+<pre class="Agda"><a id="643" class="Keyword">module</a> <a id="650" href="InfiniteSearch.html" class="Module">InfiniteSearch</a> <a id="665" class="Keyword">where</a>
+</pre>
+<p>A type X is searchable if, given any predicate <code>p : X →
+{tt,ff}</code>, we can find some <code>x : X</code> such that if there
+is some x₀ such that <code>p(x₀) ≡ tt</code> then also <code>p(x) ≡
+tt</code>.</p>
+<p>In <a
+href="http://math.andrej.com/2007/09/28/seemingly-impossible-functional-programs/">Haskell</a>,
+or <a
+href="https://www.cs.bham.ac.uk/~mhe/agda/CountableTychonoff.html">Agda
+with the termination checker turned off</a>, we can write a program that
+searches Cantor space (infinitary binary sequences) ─ in fact, Martín
+Escardó wrote both programs, in <a
+href="http://math.andrej.com/2007/09/28/seemingly-impossible-functional-programs/">2007</a>
+and <a
+href="https://www.cs.bham.ac.uk/~mhe/agda/CountableTychonoff.html">2011</a>
+respectively.</p>
+<p>The latter program goes further than just the Cantor space, it in
+fact shows that searchable types are closed under countable
+(<code>ℕ</code>-indexed) products. Given that searchable types coincide
+with the topological notion of compact types, this program – along with
+the proof that it terminates – are tantamount to the Tychonoff theorem
+for searchable types.</p>
+<p>The proofs that these programs terminate rely on classical logic;
+they assume that the given predicates are continuous, and they use
+classical logic to determine that they are uniformly continuous. We wish
+to give a constructive formulation of the the Tychonoff theorem for
+searchable types by explicitly restricting to uniformly continuous
+predicates.</p>
+<p>Intuitively, a predicate <code>p : X → {tt,ff}</code> is uniformly
+continuous if there is some notion of precision <code>δ</code> such
+that, for all <code>x,y : X</code> that are <code>δ</code>-close if
+<code>p(x) ≡ tt</code> then also <code>p(y) ≡ tt</code>.</p>
+<p>We find it convenient to formulate uniform continuity using the
+notion of a closeness function. If a type <code>X</code> has a closeness
+function <code>c : X × X → ℕ∞</code>, where <code>ℕ∞</code> is the
+natural numbers extended with a point at infinity, then we can define a
+version of uniform continuity on predicates of that type. Using this
+version of uniform continuity, the notion of precision is a natural
+number <code>δ : ℕ</code>, and two elements <code>x,y : X</code> are
+<code>δ</code>-close if <code>δ ≼ c(x,y)</code>.</p>
+<p>If a type has a canonical closeness function such that we can search
+the type for the answer to any predicate that is uniformly continuous
+with respect to the closeness function, then it is called (uniformly)
+continuously searchable.</p>
+<p>We prove the Tychonoff theorem for continuously searchable types in
+constructive mathematics.</p>
+<h2 id="part-i">Part I</h2>
+<pre class="Agda"><a id="3057" class="Keyword">open</a> <a id="3062" class="Keyword">import</a> <a id="3069" href="InfiniteSearch1.html" class="Module">InfiniteSearch1</a>
+</pre>
+<p>In the first part, we introduce the type theory and the concepts of
+closeness functions and continuously searchable types formally.</p>
+<p>Then, we show that: 1. Every discrete type has a canonical closeness
+function, and that every such type is continuously searchable with
+respect to this closeness function if it is searchable in the
+traditional sense. 1. Every sequence type of discrete types has a
+canonical closness function, and that every such type is continuously
+searchable with respect to this closeness function.</p>
+<p><a href="InfiniteSearch1.html">Please click here to read Part
+I.</a></p>
+<h2 id="part-ii">Part II</h2>
+<pre class="Agda"><a id="3689" class="Keyword">open</a> <a id="3694" class="Keyword">import</a> <a id="3701" href="InfiniteSearch2.html" class="Module">InfiniteSearch2</a>
+</pre>
+<p>In the second part, we show that types equipped with closeness
+functions are closed under countable products. Further, and chiefly,
+continuously searchable types themselves are closed under countable
+products.</p>
+<p><a href="InfiniteSearch2.html">Please click here to read Part
+II.</a></p>
+<h2 id="further-reading">Further reading</h2>
+<pre><code> Escardo, Martin. (2007).
+   Infinite sets that admit fast exhaustive search.
+   Proceedings - Symposium on Logic in Computer Science (LICS 2007).
+ 
+ Ghica, Dan R. and Waugh Ambridge, Todd. (2021).
+   Global optimisation with constructive reals.
+   Proceedings - Symposium on Logic in Computer Science (LICS 2021).
+</code></pre>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>Thank you to <a href="https://www.cs.bham.ac.uk/~mhe/">Martín
+Escardó</a> for all the support, <a
+href="https://www.cs.bham.ac.uk/~txd880/">Tom de Jong</a> for feedback,
+and <a href="https://www.georgejkaye.com/">George Kaye</a> for help with
+formatting the posts.</p>

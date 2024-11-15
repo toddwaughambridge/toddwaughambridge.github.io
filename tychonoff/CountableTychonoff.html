@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html><head><meta charset="utf-8"><title>CountableTychonoff</title><link rel="stylesheet" href="Agda.css"></head><body><pre class="Agda"><a id="1" class="Background">Martin Escardo 2011.
+
+We now iterate the proof of the fact that binary products preserve
+compactness, to get that countable (dependent) products preserve
+compactness. The function countable-Tychonoff requires explicit
+indication of termination.
+
+</a><a id="247" class="Markup">\begin{code}</a>
+
+<a id="261" class="Symbol">{-#</a> <a id="265" class="Keyword">OPTIONS</a> <a id="273" class="Pragma">--without-K</a> <a id="285" class="Pragma">--exact-split</a> <a id="299" class="Symbol">#-}</a>
+
+<a id="304" class="Keyword">open</a> <a id="309" class="Keyword">import</a> <a id="316" href="UF-FunExt.html" class="Module">UF-FunExt</a>
+
+<a id="327" class="Keyword">module</a> <a id="334" href="CountableTychonoff.html" class="Module">CountableTychonoff</a> <a id="353" class="Symbol">(</a><a id="354" href="CountableTychonoff.html#354" class="Bound">fe</a> <a id="357" class="Symbol">:</a> <a id="359" href="UF-FunExt.html#969" class="Function">FunExt</a><a id="365" class="Symbol">)</a> <a id="367" class="Keyword">where</a>
+
+<a id="374" class="Keyword">open</a> <a id="379" class="Keyword">import</a> <a id="386" href="SpartanMLTT.html" class="Module">SpartanMLTT</a>
+<a id="398" class="Keyword">open</a> <a id="403" class="Keyword">import</a> <a id="410" href="CompactTypes.html" class="Module">CompactTypes</a>
+<a id="423" class="Keyword">open</a> <a id="428" class="Keyword">import</a> <a id="435" href="Sequence.html" class="Module">Sequence</a> <a id="444" href="CountableTychonoff.html#354" class="Bound">fe</a>
+
+<a id="binary-Tychonoff&#39;"></a><a id="448" href="CountableTychonoff.html#448" class="Function">binary-Tychonoff&#39;</a> <a id="466" class="Symbol">:{</a><a id="468" href="CountableTychonoff.html#468" class="Bound">X</a> <a id="470" class="Symbol">:</a> <a id="472" href="Natural-Numbers-Type.html#105" class="Datatype">ℕ</a> <a id="474" class="Symbol">→</a> <a id="476" href="Universes.html#260" class="Generalizable">𝓤</a> <a id="478" href="Universes.html#403" class="Function Operator">̇</a> <a id="480" class="Symbol">}</a> <a id="482" class="Symbol">→</a>
+
+ <a id="486" href="CompactTypes.html#4205" class="Function">compact∙</a> <a id="495" class="Symbol">(</a><a id="496" href="CountableTychonoff.html#468" class="Bound">X</a> <a id="498" class="Number">0</a><a id="499" class="Symbol">)</a> <a id="501" class="Symbol">→</a>  <a id="504" href="CompactTypes.html#4205" class="Function">compact∙</a> <a id="513" class="Symbol">((</a><a id="515" href="CountableTychonoff.html#515" class="Bound">n</a> <a id="517" class="Symbol">:</a> <a id="519" href="Natural-Numbers-Type.html#105" class="Datatype">ℕ</a><a id="520" class="Symbol">)</a> <a id="522" class="Symbol">→</a> <a id="524" href="CountableTychonoff.html#468" class="Bound">X</a> <a id="526" class="Symbol">(</a><a id="527" href="Natural-Numbers-Type.html#132" class="InductiveConstructor">succ</a> <a id="532" href="CountableTychonoff.html#515" class="Bound">n</a><a id="533" class="Symbol">))</a>
+ <a id="537" class="Symbol">→</a> <a id="539" href="CompactTypes.html#4205" class="Function">compact∙</a> <a id="548" class="Symbol">((</a><a id="550" href="CountableTychonoff.html#550" class="Bound">n</a> <a id="552" class="Symbol">:</a> <a id="554" href="Natural-Numbers-Type.html#105" class="Datatype">ℕ</a><a id="555" class="Symbol">)</a> <a id="557" class="Symbol">→</a> <a id="559" href="CountableTychonoff.html#468" class="Bound">X</a> <a id="561" href="CountableTychonoff.html#550" class="Bound">n</a><a id="562" class="Symbol">)</a>
+
+<a id="565" href="CountableTychonoff.html#448" class="Function">binary-Tychonoff&#39;</a> <a id="583" href="CountableTychonoff.html#583" class="Bound">ε</a> <a id="585" href="CountableTychonoff.html#585" class="Bound">δ</a> <a id="587" class="Symbol">=</a>
+  <a id="591" href="CompactTypes.html#15187" class="Function">retractions-preserve-compactness</a>
+  <a id="626" href="Sequence.html#861" class="Function">cons-has-section&#39;</a>
+  <a id="646" class="Symbol">(</a><a id="647" href="CompactTypes.html#14824" class="Function">binary-Tychonoff</a> <a id="664" href="CountableTychonoff.html#583" class="Bound">ε</a> <a id="666" href="CountableTychonoff.html#585" class="Bound">δ</a><a id="667" class="Symbol">)</a>
+
+<a id="670" class="Markup">\end{code}</a><a id="680" class="Background">
+
+The following needs disabling of termination checking. It terminates
+on the assumption that functions are continuous, but doesn&#39;t use their
+moduli of continuity. Put another way, we get an infinite proof, so to
+speak, but whenever it is applied to compute a ground value, a finite
+portion of the proof is used, because of continuity.
+
+We emphasize that although continuity is used at the meta-level to
+justify termination, the result is not anti-classical. In fact,
+classically, all sets are compact! This module just enlarges the
+constructive universe a bit, using Brouwerian ideas, but being
+compatible with Bishop in the sense of not contradicting classical
+mathematics.
+
+Because the proof of termination is not constructive, if you are a
+strict constructivist maybe you won&#39;t be convinced that this
+proof-program always terminates (when used to define a value of ground
+type). However, you will have a hard time exhibiting a
+counter-example: the assumption of existence of a non-continuous
+function allows you to constructively prove LPO! (With the termination
+checker enabled.) (I plan to actually write down this proof in Agda.)
+
+
+</a><a id="1819" class="Markup">\begin{code}</a>
+
+<a id="1833" class="Symbol">{-#</a> <a id="1837" class="Keyword">TERMINATING</a> <a id="1849" class="Symbol">#-}</a>
+<a id="countable-Tychonoff"></a><a id="1853" href="CountableTychonoff.html#1853" class="Function">countable-Tychonoff</a> <a id="1873" class="Symbol">:{</a><a id="1875" href="CountableTychonoff.html#1875" class="Bound">X</a> <a id="1877" class="Symbol">:</a> <a id="1879" href="Natural-Numbers-Type.html#105" class="Datatype">ℕ</a> <a id="1881" class="Symbol">→</a> <a id="1883" href="Universes.html#260" class="Generalizable">𝓤</a> <a id="1885" href="Universes.html#403" class="Function Operator">̇</a> <a id="1887" class="Symbol">}</a>
+                    <a id="1909" class="Symbol">→</a> <a id="1911" class="Symbol">((</a><a id="1913" href="CountableTychonoff.html#1913" class="Bound">n</a> <a id="1915" class="Symbol">:</a> <a id="1917" href="Natural-Numbers-Type.html#105" class="Datatype">ℕ</a><a id="1918" class="Symbol">)</a> <a id="1920" class="Symbol">→</a> <a id="1922" href="CompactTypes.html#4205" class="Function">compact∙</a> <a id="1931" class="Symbol">(</a><a id="1932" href="CountableTychonoff.html#1875" class="Bound">X</a> <a id="1934" href="CountableTychonoff.html#1913" class="Bound">n</a><a id="1935" class="Symbol">))</a> <a id="1938" class="Symbol">→</a> <a id="1940" href="CompactTypes.html#4205" class="Function">compact∙</a> <a id="1949" class="Symbol">((</a><a id="1951" href="CountableTychonoff.html#1951" class="Bound">n</a> <a id="1953" class="Symbol">:</a> <a id="1955" href="Natural-Numbers-Type.html#105" class="Datatype">ℕ</a><a id="1956" class="Symbol">)</a> <a id="1958" class="Symbol">→</a> <a id="1960" href="CountableTychonoff.html#1875" class="Bound">X</a> <a id="1962" href="CountableTychonoff.html#1951" class="Bound">n</a><a id="1963" class="Symbol">)</a>
+<a id="1965" href="CountableTychonoff.html#1853" class="Function">countable-Tychonoff</a> <a id="1985" class="Symbol">{</a><a id="1986" href="CountableTychonoff.html#1986" class="Bound">X</a><a id="1987" class="Symbol">}</a> <a id="1989" href="CountableTychonoff.html#1989" class="Bound">ε</a> <a id="1991" class="Symbol">=</a> <a id="1993" href="CountableTychonoff.html#448" class="Function">binary-Tychonoff&#39;</a> <a id="2011" class="Symbol">(</a><a id="2012" href="Sequence.html#369" class="Function">head</a> <a id="2017" href="CountableTychonoff.html#1989" class="Bound">ε</a><a id="2018" class="Symbol">)</a> <a id="2020" class="Symbol">(</a><a id="2021" href="CountableTychonoff.html#1853" class="Function">countable-Tychonoff</a> <a id="2041" class="Symbol">(</a><a id="2042" href="Sequence.html#429" class="Function">tail</a> <a id="2047" href="CountableTychonoff.html#1989" class="Bound">ε</a><a id="2048" class="Symbol">))</a>
+
+<a id="2052" class="Markup">\end{code}</a><a id="2062" class="Background">
+
+A corollary is that the Cantor space is compact. See the module
+CantorCompact.
+</a></pre></body></html>
