@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>
+9th Southern and Midlands Logic Seminar, Birmingham
+</title>
+
+<link href="styles.css" rel="stylesheet" type="text/css">
+<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+</head>
+
+<body>
+
+<div id="contents">
+
+<h1>
+9<sup>th</sup> Southern and Midlands Logic Seminar, University of Birmingham
+</h1>
+
+  <p>
+The ninth meeting of the <a href="https://t-powell.github.io/southern_logic_seminar/sls.html">Southern and Midlands Logic Seminar</a> (SMLS)
+will be held on the afternoon of <b>Wednesday 12<sup>th</sup> March 2025</b> at the University of Birmingham. 
+The meeting will take place in <b>room UG06 in the Murray Learning Centre</b> on the main Edgbaston campus.
+  </p>
+
+<p>
+Participation is free to all, but please contact <a href="mailto:t.waughambridge@bham.ac.uk">Todd Waugh Ambridge</a> if you intend to participate for practical purposes.
+</p>
+
+<div style="text-align: center;">
+<img float:middle; margin: 0 10px 10px 0;" width="600" height="auto" src="bham-university.jpg" border=1 class="center" />
+</div> 
+
+  <p>
+Participants are encouraged to join the SMLS community on <a href="https://slack.com/intl/en-gb/">Slack</a>, which is used for announcements and coordination. Please contact one of the SMLS organisers to be added.
+  </p> 
+
+  <p>
+The meeting is supported by a London Mathematical Society <a href="https://www.lms.ac.uk/grants/joint-research-groups-uk-scheme-3">Joint Research Groups</a> grant, 
+with additional funding from the UKRI Future Leaders Fellowship <a href="https://gtr.ukri.org/projects?ref=MR%2FS035540%2F1"><i>Structure vs. Invariants in Proofs</i></a> (StrIP) 
+and local support from the <a href="https://www.birmingham.ac.uk/schools/computer-science/index.aspx">School of Computer Science</a> at the University of Birmingham.
+  </p>
+
+<h2>
+Programme: Wednesday 12<sup>th</sup> March, 2023
+</h2>
+
+<p>
+The programme will be announced in the coming days.
+</p>
+
+<h2>
+Venue
+</h2>
+
+<p>
+The main campus of the University of Birmingham is located in Edgbaston, just outside the city centre. 
+There are frequent trains serving the campus train station (University), about a 10 minute journey from Birmingham New Street. 
+There are also regular buses, but trains will be more convenient for most. 
+Google Maps is reliable for checking train and bus times.  
+It is also possible to travel to/from the campus on foot along the canals, about a 50-60 minute walk from the centre.
+</p>
+
+<p>
+All talks, lunch and coffee breaks will take place in <b>UG06 in the Murray Learning Centre</b> on the main Edgbaston campus. 
+</p>
+<div style="text-align: center;">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2431.569838978397!2d-1.9385670233230514!3d52.45070667204314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4870bdc98b57efd5%3A0x15bae60ae19dc759!2sMurray%20Learning%20Centre!5e0!3m2!1sen!2suk!4v1699274981327!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<h2 id="social">Social events</h2>
+<p>
+  There will be a social dinner on the evening of the day of the event. The location is to be announced.
+</p>
+
+<h2>
+SMLS Organisers
+</h2>
+
+  <ul class="lists"> 
+
+  <li><a href="https://www.anupamdas.com/wp/">Anupam Das</a> (Birmingham)</li>
+
+  <li><a href="https://t-powell.github.io/">Thomas Powell</a> (Bath)</li>
+
+  <li><a href="https://www.cs.ox.ac.uk/people/bartek.klin/main.html">Bartek Klin</a> (Oxford)</li>
+
+  <li><a href="https://taroccoesbrocco.github.io/">Giulio Guerrieri</a> (Sussex)</li>
+
+  <li><a href="http://www.zanasi.com/fabio/#/main.html">Fabio Zanasi</a> (UCL)</li>
+
+  </ul>
+
+<h2>
+  Local Organisers
+</h2>
+
+<ul class="lists"> 
+
+  <li>><a href="https://toddwaughambridge.co.uk/">Todd Waugh Ambridge</a></li>
+
+  <li>><a href="https://pblevy.github.io/">Paul Levy</a></li>
+
+  </ul>
+
+<br>
+
+<div style="text-align: center;">
+<div style="float: left;">
+<img style="float:middle; margin: 0 10px 10px 0;" width="200" height="auto" src="lms.png" class="center" />
+</div> 
+
+<div style="float: left;">
+<img style="float:middle; margin: 0 10px 10px 0;" width="200" height="auto" src="ukri-logo.png" class="center" />
+</div> 
+
+<div style="float: left;">
+<img style="float:middle; margin: 0 10px 10px 0;" width="200" height="auto" src="uob-logo.png" class="center" />
+</div> 
+</div>
+
+</div>
+</body>
