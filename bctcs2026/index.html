@@ -6,8 +6,18 @@
 BCTCS 2026, Birmingham
 </title>
 
+<!-- MathJax for LaTeX in abstracts -->
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['\\[','\\]']]
+  }
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 <link href="css.css" rel="stylesheet" type="text/css">
-<link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
 </head>
 
 <body>
@@ -37,13 +47,13 @@ The <a href="https://www.bctcs.ac.uk/">British Colloquium for Theoretical Comput
 
   <ul class="lists"> 
 
-	<li><b>Mid January 2026:</b> Abstract submission opens <b>Now open!</b></li>
+	<li><b>Mid January 2026:</b> Abstract submission opens </li>
 
-  <li><b>4th March 2026:</b> Registration opens <b>Now open!</b></li>
+	<li><b>28th February 2026:</b> Deadline for abstract submission <b>Now closed!</b></li>
 
-	<li><b>28th February 2026:</b> Deadline for abstract submission</li>
+  <li><b>4th March 2026:</b> Registration opens <b>Now <a href="#registration">open</a>!</b></li>
 
-	<li><b>6th March 2026:</b> Notification of acceptance</li>
+  <li><b>6th March 2026:</b> Notification of acceptance</li>
 	
 	<li><b>15th March 2026:</b> Deadline for registration</li>
 
@@ -57,12 +67,6 @@ The <a href="https://www.bctcs.ac.uk/">British Colloquium for Theoretical Comput
 </div> 
 <br/>
 
-<h2 id="abstracts">Abstract submission</h2>
-<p>
-  The program will include a number of contributed talks of around 20 minutes each (possibly in parallel sessions). Everyone is welcome to submit an abstract. PhD students and post-docs are in particular encouraged to contribute.
-</p>
-<p>The abstract submission is now closed.</p>
-
 <h2 id="registration">Registration</h2>
 <p>
   Registration is now open. Please fill out the following form: <a href="https://forms.cloud.microsoft/e/BpBBUzGdG6">https://forms.cloud.microsoft/e/BpBBUzGdG6</a>. 
@@ -71,15 +75,459 @@ The <a href="https://www.bctcs.ac.uk/">British Colloquium for Theoretical Comput
 
 <h2 id="invited">Invited speakers</h2>
 <p>
-  <ul>
-    <li><a href="https://www.southampton.ac.uk/people/5wyrzl/doctor-corina-cirstea">Corina Cirstea</a> (University of Southampton)<i>(joint with SMLS)</i></li>
-    <li><a href="https://mircogiacobbe.github.io/">Mirco Giacobbe</a> (University of Birmingham)</li>
-    <li><a href="https://users.ox.ac.uk/~coml0742/">Ján Pich</a> (University of Oxford)</li>
-    <li><a href="https://www.soundandcomplete.org/">Azalea Raad</a> (Imperial College London)</li>
-    <li><a href="https://sites.google.com/view/joachim-spoerhase">Joachim Spoerhase</a> (University of Liverpool)</li>
-    <li><a href="https://homepages.inf.ed.ac.uk/wadler/">Phil Wadler</a> (University of Edinburgh)</li>
-  </ul>
+<div class="invited-talk">
+<span class="invited-talk-header">
+<span class="talk-title">
+  <strong><a href="https://www.southampton.ac.uk/people/5wyrzl/doctor-corina-cirstea">Corina Cirstea</a></strong> 
+  <em>(University of Southampton, joint with SMLS)</em></span>
+</div>
+
+<div class="invited-talk">
+<span class="invited-talk-header">
+<span class="talk-title">
+  <strong><a href="https://mircogiacobbe.github.io/">Mirco Giacobbe</a></strong> 
+  <em>(University of Birmingham)</em></span>
+</div>
+
+<div class="invited-talk">
+<span class="invited-talk-header">
+<span class="talk-title">
+  <strong><a href="https://users.ox.ac.uk/~coml0742/">Ján Pich</a></strong> 
+  <em>(University of Oxford)</em></span>
+</div>
+
+<div class="invited-talk">
+<span class="invited-talk-header">
+<span class="talk-title">
+  <strong><a href="https://www.soundandcomplete.org/">Azalea Raad</a></strong> 
+  <em>(Imperial College London)</em></span>
+</div>
+
+<div class="invited-talk">
+<span class="invited-talk-header">
+<span class="talk-title">
+  <strong><a href="https://sites.google.com/view/joachim-spoerhase">Joachim Spoerhase</a></strong> 
+  <em>(University of Liverpool)</em></span>
+</div>
+
+<div class="invited-talk">
+<span class="invited-talk-header">
+<span class="talk-title">
+  <strong><a href="https://homepages.inf.ed.ac.uk/wadler/">Phil Wadler</a></strong> 
+  <em>(University of Edinburgh)</em></span>
+</div>
 </p>
+
+<h2 id="accepted">Accepted talks</h2>
+<div class="talks">
+
+<div class="talk">
+
+<button class="talk-header">
+<span class="triangle">▼</span>
+<span class="talk-title"><strong>Sarosh Adenwalla</strong> — <em>Boolean Combinations of Graph Classes</em></span>
+</button>
+
+<div class="talk-body">
+<p>Boolean combinations allow combining given combinatorial objects to obtain new, potentially more complicated, objects. In this paper, we initiate a systematic study of this idea applied to graphs. In order to understand expressive power and limitations of boolean combinations in this context, we investigate how they affect different combinatorial and structural properties of graphs, in particular \(\chi\)-boundedness, as well as characterize the structure of boolean combinations of graphs from various classes.</p>
+<p class="talk-link"><a href="https://arxiv.org/abs/2412.19551" target="_blank">Preprint</a></p>
+</div>
+
+</div>
+
+<div class="talk">
+
+<button class="talk-header">
+<span class="triangle">▼</span>
+<span class="talk-title"><strong>Mona Alluwaym</strong> — <em>Efficient Learning of Weak Deterministic Büchi Automata</em></span>
+</button>
+
+<div class="talk-body">
+<p>We present an efficient Angluin-style learning algorithm for weak deterministic Büchi automata (wDBAs). Different to ordinary deterministic Büchi and co-Büchi automata, wDBAs have a minimal normal form, and we show that we can learn this minimal normal form efficiently. We provide an improved result on the number of queries required and show on benchmarks that this theoretical advantage translates into significantly fewer queries: while previous approaches require a quintic number of queries, we only require quadratically many queries in the size of the canonic wDBA that recognises the target language.</p>
+<p class="talk-link"><a href="https://arxiv.org/abs/2508.14274" target="_blank">Preprint</a></p>
+</div>
+
+</div>
+
+<div class="talk">
+
+<button class="talk-header">
+<span class="triangle">▼</span>
+<span class="talk-title"><strong>Justus Becker</strong> — <em>The proof theory and semantics of second-order (intuitionistic) tense logic</em></span>
+</button>
+
+<div class="talk-body">
+<p>Second-order logic extends propositional logic by adding quantifiers that range over propositions. 
+Over intuitionistic logic, second-order quantification allows for an encoding of the positive connectives using only the negative fragment of a logic.
+For example, we can define \(0 := \forall X X\) and \(A \lor B := \forall X(( A \to X) \to (B \to X) \to X)\).
+In this work we apply the second-order methodology to (intuitionistic) tense logic by recovering definitions of forward and backwards looking diamonds over second-order propositional logic using only their dual modalities, i.e. forward and backwards looking boxes. 
+This is in contrast to the usual setting of intuitionistic modalities where, without second-order quantifiers, we are not able to interdefine boxes and diamonds.
+<br/><br/>
+As our main result, we give different but ultimately equivalent characterisations of second-order intuitionistic tense logic, including an axiomatisation, a labelled sequent calculus and two kinds of semantics.
+Via the equivalence of these characterisations, we obtain semantic soundness and completeness for these logics, as well as cut-admissibility for our sequent calculus.
+As a consequence, our intuitionistic second-order modal logic conservatively extends the intuitionistic propositional tense logic IKt of Ewald, which itself is an extension of the intuitionistic modal logic IK of Fischer Servi and Simpson.</p>
+<p class="talk-link"><a href="https://arxiv.org/abs/2602.06253" target="_blank">Preprint</a></p>
+</div>
+
+</div>
+
+<div class="talk">
+
+<button class="talk-header">
+<span class="triangle">▼</span>
+<span class="talk-title"><strong>Harry Bryant</strong> — <em>Verified Techniques for Propositional SMT Proof Checking to Support Safety-Critical Railway Assurance</em></span>
+</button>
+
+<div class="talk-body">
+<p>Safety-critical systems such as railway interlockings require strong guarantees of correctness, making verification and verified proof checking essential. Modern railway verification tools rely heavily on SAT and SMT solvers such as Z3 to validate safety properties, but the complexity of these solvers means that independent checking of their outputs is required for critical applications. To increase trust and assurance, we develop verified techniques for checking Z3 proof logs within the Rocq proof assistant.
+<br/><br/>
+Our work introduces a fully verified framework for checking propositional Z3 proofs, centred around a formally proven Reverse Unit Propagation (RUP) checker. As part of this pipeline, we provide a verified checker for handling Tseitin transformations, which Z3 applies when converting arbitrary formulas into CNF. Building on this verified core, we develop an OCaml-based parser and preprocessing pipeline that reconstructs Z3's proof steps into a representation compatible with the verified checker. These components form an independently developed and verified toolchain capable of checking complete propositional Z3 proof logs of unsatisfiability. Therefore, producing a validated trace rather than a simple yes/no answer. The tool has been tested on examples from an industrial railway verification tool to demonstrate this. Beyond propositional reasoning, we are working towards extending the checker to support proofs involving linear integer inequalities through the Farkas Lemma, which Z3 uses in its arithmetic reasoning. This extension serves both as a template for incorporating additional SMT-LIB theory rules and enables application to further real-world railway verification tasks such as ECTS proofs, where positioning constraints are expressed as integer inequalities. Together, these techniques form the foundation of a fully verified, extensible proof-checking framework designed to strengthen assurance in safety-critical railway verification pipelines.</p>
+</div>
+
+</div>
+
+<div class="talk">
+
+<button class="talk-header">
+<span class="triangle">▼</span>
+<span class="talk-title"><strong>Nox (Jessica) Cowie</strong> — <em>Double negation elimination and the multiple succedent structure of LK</em></span>
+</button>
+
+<div class="talk-body">
+<p>The classical natural deduction system NK can be obtained from the intuitionistic system NJ by adding a double negation elimination inference rule. On the other hand, the intuitionistic and classical sequent calculi LJ and LK are differentiated not by the addition of a rule, but by the number of formulae that can be contained in the right-hand side of a sequent. In an LJ-derivation, the right-hand side of a sequent can contain at most one formula; LK is obtained by lifting this restriction. This distinction between LJ and LK is of a notably different nature than that between NJ and NK: the first being purely structural, and the second involving the explicit addition of a classical inference pattern. We demonstrate how the classical strength of double negation elimination emerges from the structural feature of right multiplicity by examining the relationship between derivations in natural deduction and sequent calculus and, in particular, applications of their respective implication and negation inference rules. As a result, we clarify how right multiplicity constitutes a counterpart to the principle of double negation elimination.</p>
+</div>
+
+</div>
+
+<div class="talk">
+
+<button class="talk-header">
+<span class="triangle">▼</span>
+<span class="talk-title"><strong>Robert-William Nii Odartei Evans</strong> — <em>Designing and Verifying a Post-Quantum Protocol</em></span>
+</button>
+
+<div class="talk-body">
+<p>Formal verification can serve as a useful tool for developing systems. Verifying cryptographic protocols provides mathematical assurance of their correctness. It enables system designers and engineers to place trust in their security guarantees prior to deployment and mass adoption. Given that security vulnerabilities are often expensive or impossible to remedy once systems are operational, formal verification is widely regarded as a prudent and necessary step in protocol development.
+<br/><br/>
+This talk explores the integration of CoverCrypt, an ETSI-standardised post-quantum attribute-based encryption scheme, into a secure protocol. This custom protocol is designed to provide quantum-safe protection for data at rest while maintaining practical usability in enterprise environments. The proposed system targets cloud-based document storage and processing, where centralized policy enforcement, fine-grained access control, and long-term confidentiality are essential. Documents remain encrypted while stored yet can be accessed by authorized users.
+<br/><br/>
+In the proposed design, encryption can be performed on potentially untrusted client devices using a public key, while decryption is handled by a centralized server operating under a trusted server model. This architecture enables scalable access control and mitigates the risks posed by future cryptographic advances. To assess the security of the protocol, several key properties are formally verified using ProVerif, a cryptographic model checker. Based on the formally verified protocol description, a prototype implementation was developed using modern web technologies and existing cloud storage systems to demonstrate the feasibility of the proposed approach. The project shows that theoretical models can be used as a blueprint for the creation of practical solutions.</p>
+</div>
+
+</div>
+
+<div class="talk">
+
+<button class="talk-header">
+<span class="triangle">▼</span>
+<span class="talk-title"><strong>Eva Foster</strong> — <em>Irreducible Morphisms</em></span>
+</button>
+
+<div class="talk-body">
+<p>Word homomorphisms over free semigroups and monoids play a fundamental role in theoretical computer science, particularly in the study of formal languages, automata theory, and combinatorics on words. However, a less investigated property of morphisms is their algebraic structure under composition. This naturally leads to questions on the decomposition of morphisms into simpler components. We introduce the notion of irreducible morphisms, or more intuitively, those that cannot be expressed as a non-trivial composition of other morphisms. We explore characteristic conditions for irreducibility and draw parallels between these morphisms and prime numbers, highlighting structural similarities and differences that emerge in their respective decompositions.</p>
+</div>
+
+</div>
+
+<div class="talk">
+
+<button class="talk-header">
+<span class="triangle">▼</span>
+<span class="talk-title"><strong>Jayani Hewavitharana</strong> — <em>Modelling Local Learning Dynamics in Bipartite Neural Networks</em></span>
+</button>
+
+<div class="talk-body">
+<p>We present a computational study of learning dynamics in bipartite artificial neural networks using biologically inspired, local learning rules. Unlike conventional ANNs optimised via global backpropagation, our model implements two alternative update mechanisms: one based on long-term potentiation (LTP), reflecting rapid synaptic strengthening, and another based on multi-innervated spines (MIS), which redistributes weights through localised rewiring. We analyse the effect of these rules on learning speed and the distinctiveness of output representations across a large space of input patterns.
+<br/><br/>
+The LTP algorithm promotes rapid learning, whereas the MIS procedure progresses incrementally enabling adaptive weight redistribution. Both mechanisms generate highly distinct representational spaces, highlighting fundamentally different learning trajectories. The combinatorial structure of input patterns and local update rules suggests a rich landscape in learning dynamics. These observations demonstrate that local, biologically inspired update rules can produce computationally diverse outcomes, providing a modelling framework for exploring alternative algorithms in artificial networks and offering insights for the theoretical analysis and design of novel learning systems.
+</p>
+</div>
+
+</div>
+
+<div class="talk">
+
+<button class="talk-header">
+<span class="triangle">▼</span>
+<span class="talk-title"><strong>Jinqiao Hu</strong> — <em>Failure of Symmetry of Information for Randomized Computations</em></span>
+</button>
+
+<div class="talk-body">
+<p>Symmetry of Information (SoI) is a fundamental result in Kolmogorov complexity stating that for all \(n\)-bit strings \(x\) and \(y\), \(K(x,y) = K(y) + K(x \mid y)\) up to an additive error  of \(O(\log n)\) [ZL70]. In contrast, understanding whether SoI holds for time-bounded Kolmogorov complexity measures is closely related to longstanding open problems in complexity theory and cryptography, such as the P versus NP question [LW95, Hir22] and the existence of one-way functions [HILNO23, HLO24, HLN24].
+<br/><br/>
+In this paper, we prove that SoI fails for \(rKt\) complexity, the randomized analogue of Levin's \(Kt\) complexity [Lev84]. This is the first unconditional result of this type for a randomized notion of time-bounded Kolmogorov complexity. More generally, we establish a close relationship between the validity of SoI for \(rKt\) and the existence of randomized algorithms approximating \(rKt(x)\). Motivated by applications in cryptography, we also establish the failure of SoI for a related notion called \(pKt\) complexity [HLO24], and provide an extension of the results to the average-case setting. Finally, we prove a near-optimal lower bound on the complexity of estimating conditional \(rKt\), a result that might be of independent interest.
+<br/><br/>
+Our findings complement those of [Ron04], who demonstrated the failure of SoI for \(Kt\) complexity. In contrast,  the randomized setting poses a significant challenge, which we overcome using insights from [KK25],  structural results about \(rKt\) implied by SoI, and techniques from meta-complexity [Oli19] and the theory of computational pseudorandomness [TV07].</p>
+<p class="talk-link"><a href="https://eccc.weizmann.ac.il/report/2026/021/" target="_blank">Preprint</a></p>
+</div>
+
+</div>
+
+<div class="talk">
+
+<button class="talk-header">
+<span class="triangle">▼</span>
+<span class="talk-title"><strong>Pankaj Kumar</strong> — <em>On the Parameterized Complexity of Min-Sum-Radii </em></span>
+</button>
+
+<div class="talk-body">
+<p>In the Min-Sum-radii (MSR) clustering problem, we are given a finite set X of n points in a metric space. The objective is to find at most k clusters centered at a subset of these points such that every point of X is assigned to one of the clusters, minimizing the sum of the radii of the clusters. 
+The problem is known to be NP-hard even on metrics induced by weighted planar graphs and metrics with constant doubling dimension, 
+as shown by Gibson et al.~(SWAT 2008). In this work, we investigate the parameterized complexity of MSR on metrics induced by undirected graphs. 
+We distinguish between weighted graph metrics (with positive edge weights) 
+and unweighted graph metrics (where all edges have unit weight). 
+<br/><br/>
+Weighted Graph Metrics. We show that MSR is W[1]-hard on
+metrics induced by weighted bipartite graphs, when parameterized by
+the combined parameter k the number of clusters and Delta the
+cost of the clustering. 
+We then investigate the structural
+parameterized complexity of the problem. Drexler et
+al. [<a href="https://arxiv.org/abs/2310.02130">doi:10.48550/arXiv.2310.02130</a>] showed that the MSR problem admits an XP
+algorithm on metrics induced by weighted graphs when parameterized by
+treewidth, and asked whether this can be improved to fixed-parameter
+tractability. We first answer their question in the negative, and more
+strongly show that MSR stays W[1]-hard on metrics
+induced by undirected weighted bipartite graphs when parameterized by
+the vertex cover number plus k. 
+We then turn our attention to parameters for dense graphs and show
+that MSR remains W[1]-hard when parameterized by k+Delta
+even on cliques and complete bipartite graphs. 
+<br/><br/>
+On the positive side, we employ the known XP algorithm parameterized
+by treewidth, to show that the MSR problem is FPT when
+parameterized by the parameter treewidth plus Delta. 
+Together, these results provide a complete picture of the parameterized complexity of MSR with respect to any combination of parameters k, Delta, as well as structural parameters for sparse graphs above vertex cover and known parameters for dense graphs (such as neighborhood diversity and modular width).
+<br/><br/>
+The story is rather different for unweighted graphs, since it is a long standing open question whether MSR on metrics induced by undirected
+graphs is solvable in polynomial-time. Although we cannot answer
+this question, we provide classical and parameterized hardness results  for two very closely related problems, namely EXACT-MSR (MSR and one wants to find exactly \(k\) clusters), and ALLOWED-MSR (MSR with an additional set of allowed cluster centers). We also show that MSR as well as these two problems are fixed-parameter tractable parameterized by the treedepth of the input graph.</p>
+</div>
+
+</div>
+
+<div class="talk">
+
+<button class="talk-header">
+<span class="triangle">▼</span>
+<span class="talk-title"><strong>Benjamin Langton</strong> — <em>Quantitative aspects of recursive inequalities</em></span>
+</button>
+
+<div class="talk-body">
+<p>Applied proof theory is an area of logic that applies proof theoretic techniques to proofs of known results, in order to extract bounds or other quantitative information. In recent years, this area has seen an increasing number of applications in probability theory and stochastic optimization. In this talk I will provide an introduction to rates of convergence for sequences satisfying recursive inequalities in the sense of both deterministic and stochastic sequences. In the later part of the talk I will then provide an overview of my ongoing work in this area.</p>
+</div>
+
+</div>
+
+<div class="talk">
+
+<button class="talk-header">
+<span class="triangle">▼</span>
+<span class="talk-title"><strong>Jake Masters</strong> — <em>Preciseness of Subtyping in Session Types with Mixed Choice and Session Delegation</em></span>
+</button>
+
+<div class="talk-body">
+<p><em>Multiparty session types</em> (MPST) is a type discipline for guaranteeing <em>`correctness-by-design'</em> of distributed systems. We consider session types for a multiparty session \(\pi\)-calculus with both <em>mixed choice</em> and <em>session delegation</em>. Mixed choice is a feature of process calculi allowing for non-determinism between options for sending and receiving messages and for the object endpoint. Session delegation allows message channels to be used as communication payloads. Preciseness of subtyping with session delegation, whether the subtyping is maximally safe for substitutions, has been an open problem. The main issue is that typed processes with session delegation have fairly weak correctness guarantees.
+<br/><br/>
+In this talk, we address this issue by introducing the `three-participant deadlock', which is an efficiently decidable error, and showing that typing avoids this error. Using this error, we prove that subtyping with session delegation is complete, by using proofs of the negation of subtyping to construct process contexts that witness three-participant deadlocks, when a substitution is attempted. We also prove that, due to the presence of mixed-choice, we must construct a context for each negative instance of subtyping, instead of one for each negated supertype, as in earlier work.
+<br/><br/>
+(This is a joint work with Nobuko Yoshida and is supported by EPSRC EP/T006544/2 and Horizon EU TaRDIS 101093006 (UKRI number 10066667).)
+</p>
+</div>
+
+</div>
+
+<div class="talk">
+
+<button class="talk-header">
+<span class="triangle">▼</span>
+<span class="talk-title"><strong>Aref Mohammadzadeh</strong> — <em>Generalized Decidability via Brouwer Trees</em></span>
+</button>
+
+<div class="talk-body">
+<p>Decidability and semidecidability are at the heart of computer science. If we think of "decidable" as "the answer is discoverable in finitely many (i.e. less than
+\(\omega\), the smallest infinite ordinal) steps," then "semidecidable" means that the answer is discoverable in less than
+\(\omega + 1\) steps. This formulation allows for a finer hierarchy than just "decidable, semidecidable, undecidable." For example, if every \(P (i)\) is semidecidable for each \(i : \mathbb{N}\), then
+\( \forall i\in \mathbb{N}. P(i)\)
+may not be semidecidable, but its answer is discoverable in
+\(\omega^2\)
+steps: each
+\(P (i)\) requires at most
+\(\omega\)
+steps, and there are
+\(\omega\) instances.
+
+In the context of constructive mathematics, where \(P\) is decidable if
+\(P \vee \neg P\) and semidecidable if there exists a binary sequence that is \(1\) somewhere iff \(P \) holds, we suggest and study a framework in which the above and other statements can be made precise and proved. We work in homotopy type theory, using Brouwer ordinals to specify the level of decidability of a property. In this framework, we express the property that a proposition is
+\(\alpha\)-decidable, for an ordinal \(\alpha\), and show that it generalizes decidability and semidecidability. Further generalizing known results, we show that \(\alpha\)-decidable propositions are closed under binary conjunctions and discuss for which \(\alpha\) they are closed under binary disjunction. We prove the result about countable meets alluded to in the first paragraph, and results for countable joins and iterated quantifiers. This is joint work with Tom de Jong, Nicolai Kraus, and Fredrik Nordvall Forsberg. All our results are formalized in cubical Agda.
+</p>
+<p class="talk-link"><a href="https://arxiv.org/abs/2602.10844" target="_blank">Preprint</a>, <a href="https://code.arefmohammadzadeh.com/brouwer-ordinals-decidability/BrouwerTree.OrdinalDecidability.Paper.html">Formalisation</a>, <a href="https://tinyurl.com/ordinal-decidability">Formalisation Repository</a></p>
+</div>
+
+</div>
+
+<div class="talk">
+
+<button class="talk-header">
+<span class="triangle">▼</span>
+<span class="talk-title"><strong>Benedikt Pago</strong> — <em>Lower Bounds in Algebraic Complexity via Symmetry and Homomorphism Polynomials</em></span>
+</button>
+
+<div class="talk-body">
+<p>Valiant’s conjecture from 1979 asserts that the algebraic circuit complexity classes VP and VNP are distinct, meaning that the permanent does not admit polynomial-size algebraic circuits in the way the determinant does. While the confirmation of the conjecture seems presently out of reach, in 2020 Dawar and Wilsenach proved its symmetric analogue: The permanent does not admit symmetric algebraic circuits of polynomial size, while the determinant does. Symmetric algebraic circuits are both a powerful computational model and amenable to proving unconditional lower bounds. In this paper, we develop a symmetric algebraic complexity theory by introducing symmetric analogues of the complexity classes VP, VBP, and VF called symVP, symVBP, and symVF. They comprise polynomials that admit symmetric algebraic circuits, skew circuits, and formulas, respectively, of polynomial orbit size. While the separation of VP, VBP, and VF is a challenging open problem, we achieve this unconditionally for the corresponding symmetric classes. 
+<br/><br/>
+To that end, we characterise the polynomials in symVF and symVBP as those that can be written as linear combinations of homomorphism polynomials for patterns of bounded treedepth and pathwidth, respectively. This extends a previous characterisation by Dawar, Pago, and Seppelt (2025) of symVP. 
+<br/><br/>
+Although symVBP and symVP admit strong lower bounds, we are able to show that these complexity classes are rather powerful: They contain homomorphism polynomials which are VBP- and VP-complete, respectively. Under the assumption that VFPT is unequal to VW[1], we precisely identify the homomorphism polynomials that lie in VP as those whose patterns have bounded treewidth and thereby resolve an open problem posed by Saurabh (2016).
+<br/><br/>
+Joint work with Prateek Dwivedi and Tim Seppelt.</p>
+<p class="talk-link"><a href="https://arxiv.org/abs/2601.09343" target="_blank">Preprint</a></p>
+</div>
+
+</div>
+
+<div class="talk">
+
+<button class="talk-header">
+<span class="triangle">▼</span>
+<span class="talk-title"><strong>Elias Percy</strong> — <em>Game-Comonadic Approach to Hypertree Parameters and Loosely-Guarded Logics</em></span>
+</button>
+
+<div class="talk-body">
+<p>Game comonads organise the tacit connections between tree-like decompositions, combinatorial parameters, logical equivalence, and the associated Spoiler-Duplicator games. In work by Abramsky and Marsden, game comonads were constructed for the various guarded fragments of first-order logic. The coalgebras for these comonads correspond to guarded tree decompositions that are “acyclic witnesses”. We show how one can modify their guarded comonad construction in order to obtain comonads whose coalgebras are hypertree decompositions yielding a characterisation of hypertree width for hypergraphs and relational structures. For the comonad over hypergraphs, we demonstrate the coKleisli category characterises equivalences in variants of a 2-sorted bounded edge variable logic. For the comonad over relational structures, we demonstrate that the coKleisli category characterises equivalence in a positive-existential and counting extension of bounded conjunct loosely-guarded logic. Applying these characterisations, we discuss homomorphism-counting results relating hypertree-width with these logics. We then see how modifications of these constructions give rise to coalgebraic definitions of elimination forests and hypertree-depth, thus obtaining categorical characterisations of equivalence in the bounded depth fragments of these logics. Finally, we obtain homomorphism-counting results relating hypertree-depth with these bounded depth fragments.</p>
+</div>
+
+</div>
+
+<div class="talk">
+
+<button class="talk-header">
+<span class="triangle">▼</span>
+<span class="talk-title"><strong>Yiming Qiu</strong> — <em>Quantified Colouring and H-Free Algorithmics</em></span>
+</button>
+
+<div class="talk-body">
+<p>A well-known consequence of Brooks' Theorem is that 3-Colouring, a.k.a. \(CSP(K_3)\), is solvable in polynomial time for subcubic graphs. We begin our investigation by observing that QCSP(K_3), a.k.a. Quantified 3-Colouring, is Pspace-complete on subcubic planar graphs. This allows us to give a complexity classification for bounded alternation \(\Sigma_iQCSP(K_3)\) (\(i\geq 3\) and odd) for \(\cal{H}\)-topological-minor-free graphs. For all such (maybe infinite sets \(\cal{H}\)), we delineate between those for which \(\Sigma_iQCSP(K_3)\) is solvable in polynomial time, and those for which it is \(\Sigma^P_{i-2}\)-hard.
+<br/><br/>
+We continue our investigation of \(QCSP(K_3)\) on \(\cal{H}\)-subgraph-free graphs, contrasting with both \(CSP(K_3)\), as well as the recently introduced \(C123\)-framework.
+<br/><br/>
+Next, we turn our attention to \(P_5\)- and \(P_4\)-free graphs. We prove that \(QCSP(H)\) is in NP, for all finite graphs H, when the input is restricted to \(P_5\)-free graphs. For \(QCSP(K_3)\), on \(P_4\)-free graphs, we are able to improve this to a polynomial time algorithm.
+<br/><br/>
+Finally, we propose a certain template, the line graph of a subdivided star \(L(K^r_{1,4})\), so that \(QCSP(L(K^r_{1,4}))\) behaves curiously on \(P_m\)-free graphs. When \(m\) is small, this problem is solvable in polynomial time. For some medium \(m\), it is NP-complete, while for large enough \(m\), it is Pspace-complete.</p>
+</div>
+
+</div>
+
+<div class="talk">
+
+<button class="talk-header">
+<span class="triangle">▼</span>
+<span class="talk-title"><strong>Neha Rino</strong> — <em>Intersecting Dense Automata: Constructions, Complexity and Certificates</em></span>
+</button>
+
+<div class="talk-body">
+<p>The intersection emptiness problem for \(k\) nondeterministic finite automata asks, given \(k\) NFAs with at most \(n\) states and \(m\) transitions each, whether they accept a word in common or not. (Assume \(k\) is fixed.) This is a fundamental problem in automata theory, but there is a wide gap between the upper bound of \(O(n^2k)\) obtained from the standard Cartesian product automaton and the best known lower bound of \(n^k\) for the complexity of this problem.
+<br/><br/>
+We present new product constructions for the intersection of \(k\) NFAs, which yields an algorithm for solving intersection emptiness that runs in time \(O(n^{k-1}m)\), where each automaton has at most \(n\) states and at most \(m\) transitions. We prove that our approach for computing the intersection is conditionally optimal by providing a matching lower bound based on the Combinatorial \(k\)-Clique Hypothesis. Lastly, we provide a new efficient certificate system for \(k\)-NFA intersection emptiness.</p>
+</div>
+
+</div>
+
+<div class="talk">
+
+<button class="talk-header">
+<span class="triangle">▼</span>
+<span class="talk-title"><strong>Mukesh Tiwari</strong> — <em>One Proof, Many Implementations of Certified Sigma-Protocols</em></span>
+</button>
+
+<div class="talk-body">
+<p>Sigma-protocols are a core building block in a wide range of privacy-preserving applications, but one particular application where they have found a widespread adoption is electronic voting. They remain a popular choice in electronic voting to maintain privacy and verifiability of elections and are still used in prominent electronic voting systems such as Helios, Belenois, and SwissPost. However, existing implementations of Sigma-protocols have two critical shortcomings: (i) the same code must be written multiple times, once for the front-end (JavaScript/TypeScript) and once for the back-end (Python/OCaml/Java), which is error-prone because the front-end and back-end codes are often written by different developers, leading to inconsistencies and bugs, and (ii) none of these implementations provide formal security guarantees. 
+<br/><br/>
+In this talk, I will present a certified formalisation of a comprehensive library of \(\Sigma\)-protocols in the Rocq theorem prover. My generic formalisation over abstract vector spaces enables me to uniformly express and compose a wide class of discrete-logarithm-based Sigma-protocols, while remaining independent of any concrete group or cryptographic instantiation. Moreover, the constructive nature of my formalisation allows me to extract and compile executable implementations in OCaml, Rust, and WebAssembly, thereby eliminating code duplication. I demonstrate the practical applicability of my framework by implementing a voting server and client for Approval voting and an IACR tallysheet verifier.</p>
+</div>
+
+</div>
+
+<div class="talk">
+
+<button class="talk-header">
+<span class="triangle">▼</span>
+<span class="talk-title"><strong>Dimitrios Tsintsilidas</strong> — <em>Parallelism and Adaptivity in Student-Teacher Witnessing</em></span>
+</button>
+
+<div class="talk-body">
+<p>Student-Teacher games are a model of computation where a computationally restricted student tries to find a string satisfying some refutable property, and every time the Student outputs a candidate answer an all-knowing Teacher tries to refute it if possible. These games are a classical computational model for  the witnessing of \(\forall\exists\forall\)-formulas in Bounded Arithmetic by the well-known result of Krajíček, Pudlák and Takeuti [KPT91].
+<br/><br/>
+In this talk, we introduce subclasses of total search problems in the polynomial hierarchy which are characterized by the number of rounds and the number of candidate answers per round a Student from a related level of the polynomial hierarchy would need to solve the given problem. We then conditionally separate these different classes, and we apply this result to separate the corresponding theories in Bounded Arithmetic. These separations provide conditional answers to open problems in Bounded Arithmetic, and also enables us to lift known unprovability results to stronger theories.
+<br/><br/>
+(Joint work with Ondra Ježil.)</p>
+</div>
+
+</div>
+
+<div class="talk">
+
+<button class="talk-header">
+<span class="triangle">▼</span>
+<span class="talk-title"><strong>Danny Vagnozzi</strong> — <em>The complexity of approximating 1-in-3 SAT</em></span>
+</button>
+
+<div class="talk-body">
+<p>Given a satisfiable instance of 1-in-3 SAT, it is NP-hard to find a satisfying assignment for it, but it may be possible to efficiently find a solution subject to a weaker (not necessarily Boolean) predicate than `1-in-3'. There is a folklore conjecture predicting which choices of weaker predicates lead to tractability and for which the task remains NP-hard. One specific predicate, corresponding to the problem of linearly ordered -colouring of 3-uniform hypergraphs, has been mentioned in several recent papers as an obstacle to further progress in proving this conjecture. We prove that the problem for this predicate is NP-hard, as predicted by the conjecture.
+<br/><br/>
+We use the Promise CSP framework, where the complexity analysis is performed via the algebraic approach, by studying the structure of polymorphisms, which are multidimensional invariants of the problem at hand. The analysis of polymorphisms is in general a highly non-trivial task, and topological combinatorics was recently discovered to provide a useful tool for this. There are two distinct ways in which it was used: one is based on variations of the Borsuk-Ulam theorem, and the other aims to classify polymorphisms up to certain reconfigurations (homotopy). Our proof, whilst combinatorial in nature, shows that our problem is the first example where the features behind the two uses of topology appear together. Thus, it is likely to be useful in guiding further development of the topological method aimed at classifying Promise CSPs. An easy consequence of our result is the hardness of another specific Promise CSP, which was recently proved by Filakovský et al. by employing a deep topological analysis of polymorphisms.</p>
+<p class="talk-link"><a href="https://arxiv.org/abs/2508.14606" target="_blank">Preprint</a></p>
+</div>
+</div>
+
+<div class="talk">
+
+<button class="talk-header">
+<span class="triangle">▼</span>
+<span class="talk-title"><strong>Nachi Valliappan</strong> — <em>Cover Semantics for Intuitionistic Modalities</em></span>
+</button>
+
+<div class="talk-body">
+<p>Intuitionistic modal logic (IML) has inspired several developments in programming languages including modal type systems for staging, computational effects and language-based security. IMLs are typically studied using Kripke-style relational semantics, which simplifies proofs of meta-theoretic properties, such as completeness and consistency, by making it easy to construct models. Kripke-style relational semantics, however, relies upon classical reasoning principles, which makes it unappealing from a computational perspective and unsuitable for formalization in a constructive type theory. Goldblatt (2011) provides an alternative semantics for IMLs by extending Beth-Kripke-Joyal-style "cover" semantics for intuitionistic propositional logic with a relation to support modalities. Goldblatt's "relational cover" semantics overcomes classical reasoning but introduces a new limitation: it relies upon a "modal localization" condition that restricts the class of models and complicates model construction. Goldblatt bypasses this restriction by using intricate order-theoretic completion arguments to prove completeness. In this talk, I will present a conservative extension of relational cover semantics that alleviates this restriction and is amenable to simpler and standard model construction techniques.</p>
+</div>
+
+</div>
+
+<div class="talk">
+
+<button class="talk-header">
+<span class="triangle">▼</span>
+<span class="talk-title"><strong>Alex Wan</strong> — <em>Zero-one laws: A quantitative insight</em></span>
+</button>
+
+<div class="talk-body">
+<p>Zero-one laws are theorems that state that events of a certain type occur with probability 0 or 1. They are fundamental results which have applications in various areas of mathematics, including graph theory. In this talk, I will first reformulate the Borel zero-one law into a computational problem, before stating a specialized result that is linked closely with the Borel-Cantelli lemmas, recently studied by Arthan and Oliva in [1]. I will then take this as a starting point for a more general framework for studying zero-one laws computationally, before demonstrating some applications using this framework, including the zero-one law associated with bond percolation.
+<br/><br/>
+<em>[1] R. Arthan, P. Oliva, On the Borel-Cantelli Lemmas, the Erdős-Rényi Theorem, and the Kochen-Stone Theorem, Journal of Logic and Analysis 13(6), pp. 1--23, 2021.</em></p>
+<p class="talk-link"><a href="https://arxiv.org/abs/2508.20849v1" target="_blank">Preprint</a></p>
+</div>
+
+</div>
+
+<div class="talk">
+
+<button class="talk-header">
+<span class="triangle">▼</span>
+<span class="talk-title"><strong>Zhongyi Zhou</strong> — <em>Bounding the Lengths of Minimal B-Saturated Words over a Transitive Alphabet </em></span>
+</button>
+
+<div class="talk-body">
+<p>Let \(A\) be a finite set of letters, and \(I \subseteq A \times A\) an independence relation. We say that \((A,I)\) is a transitive alphabet if the independence relation I is transitive.
+
+Let \((A,I)\) be a transitive alphabet whose graph realisation is connected, and \(B\) a finite antichain in \(A*\). A word \(w \in A*\) is said to be \(B\)-saturated if every trace companion of \(w\) involves some \(\beta \in B\) as a subword. By Higman's Lemma, it is not difficult to see that the set \(W(B)\) of all minimal \(B\)-saturated words must be finite. The aim of this talk is to demonstrate that there exists a computable bound for the lengths of minimal \(B\)-saturated words over a transitive alphabet that is connected, which implies that the set \(W(B)\) is also computable.
+
+If time allows, I will briefly discuss the case in which the transitive alphabet is disconnected and explain the motivations behind these problems.</p>
+</div>
+
+</div>
+
+</div>
+
 
 <h2 id="programme">Programme</h2>
 <p>
@@ -115,4 +563,23 @@ BCTCS is thankful for the support of the <a href="https://heilbronn.ac.uk/">Heil
 </div> 
 
 </div>
+<script>
+const talks = document.querySelectorAll(".talk");
+
+talks.forEach(talk => {
+  talk.querySelector(".talk-header").addEventListener("click", () => {
+
+    talks.forEach(t => {
+      if (t !== talk) t.classList.remove("open");
+    });
+
+    talk.classList.toggle("open");
+
+    if (window.MathJax) {
+      MathJax.typesetPromise();
+    }
+
+  });
+});
+</script>
 </body>

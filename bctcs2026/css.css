@@ -1,5 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+button {
+  font-family: 'Krub', sans-serif;
+  font-size: 1rem;
+}
+
 html, body, div, p, li {
-    font-family: Abel, sans-serif;
+    font-family: Krub, sans-serif;
     font-size: 16px;
     font-weight: 400;
 }
@@ -85,4 +93,66 @@ ul.lists li {
     list-style-type: circle;
     margin-bottom: 5px;
     margin-top: 5px;
+}
+
+.talks {
+  max-width: 900px;
+  margin: auto;
+}
+
+.talk {
+  border-bottom: 1px solid #ddd;
+}
+
+.invited-talk-header {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1.2rem;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+.talk-header {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 10px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.talk-title {
+  line-height: 1.4;
+}
+
+.triangle {
+  margin-right: 10px;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
+}
+
+.talk.open .triangle {
+  transform: rotate(180deg);
+}
+
+.talk-body {
+  display: none;
+  padding: 6px 0 14px 26px;
+}
+
+.talk.open .talk-body {
+  display: block;
+}
+
+.talk-body p {
+  margin: 8px 0;
+}
+
+.talk-link a {
+  text-decoration: none;
 }
