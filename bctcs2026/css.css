@@ -100,6 +100,20 @@ ul.lists li {
   margin: auto;
 }
 
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+td:nth-child(1) {
+  width: 5%;
+}
+
+td:nth-child(2),
+td:nth-child(3) {
+  width: 45%;
+}
+
 .talk {
   border-bottom: 1px solid #ddd;
 }
