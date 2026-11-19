@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Rudorfle</title>
+	<script src="code.js" defer></script>
+</head>
+<body>
+	<header>
+		<div class="logo"></div>
+	</header>
+
+	<main>
+		<h1>Rudorfle</h1>
+		<p>You have £10 to spend on cookies for Cookie Break.</p>
+		<p>You get 1 point per penny spent, but immediately lose if you spend more than £10.</p>
+		<p>You get 25 bonus points for each variety of biscuits you purchase after the first.</p>
+		<p>Finally, you get 1 bonus point for each individual purchase made.</p>
+
+		<form action="#" method="get" autocomplete="off">
+			<fieldset>
+				<legend>Purchase your cookies!</legend>
+				<div data-quantity-row>
+					<label class="option"></label>
+					<button type="button" data-change="1">+</button>
+					<button type="button" data-change="-1">−</button>
+					<output aria-live="polite">0</output>
+					<input type="hidden" name="quantity" value="0">
+				</div>
+				<div data-quantity-row>
+					<label class="option"></label>
+					<button type="button" data-change="1">+</button>
+					<button type="button" data-change="-1">−</button>
+					<output aria-live="polite">0</output>
+					<input type="hidden" name="quantity" value="0">
+				</div>
+				<div data-quantity-row>
+					<label class="option">Option 3</label>
+					<button type="button" data-change="1">+</button>
+					<button type="button" data-change="-1">−</button>
+					<output aria-live="polite">0</output>
+					<input type="hidden" name="quantity" value="0">
+				</div>
+				<div data-quantity-row>
+					<label class="option"></label>
+					<button type="button" data-change="1">+</button>
+					<button type="button" data-change="-1">−</button>
+					<output aria-live="polite">0</output>
+					<input type="hidden" name="quantity" value="0">
+				</div>
+				<div data-quantity-row>
+					<label class="option"></label>
+					<button type="button" data-change="1">+</button>
+					<button type="button" data-change="-1">−</button>
+					<output aria-live="polite">0</output>
+					<input type="hidden" name="quantity" value="0">
+				</div>
+			</fieldset>
+			<button type="submit">Submit</button>
+		</form>
+	<p id="score"></p>
+	</main>
+</body>
+</html>
