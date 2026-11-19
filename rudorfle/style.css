@@ -68,6 +68,7 @@ h1 {
 main > p:not(#score) {
     margin: 8px 0;
     color: var(--muted);
+    text-align: center;
     font-size: 15px;
 }
 
@@ -257,4 +258,42 @@ form > button[type="submit"]:active {
         transition-duration: 0.01ms !important;
         animation-duration: 0.01ms !important;
     }
+}
+
+/* Copy score button */
+
+#copy-score {
+    display: block;
+    width: 100%;
+    margin: 12px 0 0;
+    padding: 13px 20px;
+    border: 2px solid var(--red);
+    border-radius: var(--radius);
+    background: transparent;
+    color: var(--red);
+    font: inherit;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+#copy-score:hover {
+    background: var(--red);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(169, 79, 73, .2);
+}
+
+#copy-score:active {
+    transform: scale(.98);
+}
+
+#copy-score:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+}
+
+#copy-score[hidden] {
+    display: none;
 }

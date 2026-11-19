@@ -230,10 +230,21 @@ async function revealScore(cost, score) {
     }
     printy("<br>" + score)
     await sleep(2000)
-    const text = document.getElementById("score").innerHTML.replaceAll("<br><br>", "\n");
-    navigator.clipboard.writeText(text);
-    printy("<br>Result copied to clipboard!")
+    document.getElementById("copy-score").hidden = false;
 }
+
+document.getElementById("copy-score").addEventListener("click", async () => {
+    const score = document.getElementById("score");
+    const text = score.innerText;
+
+    try {
+        await navigator.clipboard.writeText(text);
+        document.getElementById("copy-score").textContent = "✅ Copied!";
+    } catch (err) {
+        console.error("Clipboard failed:", err);
+        document.getElementById("copy-score").textContent = "❌ Copy failed";
+    }
+});
 
 document.addEventListener("submit", (event) => {
     event.preventDefault();
