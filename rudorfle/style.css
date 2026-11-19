@@ -1,0 +1,260 @@
+
+:root {
+    --background: #faf5eb;
+    --surface: #fffdf8;
+    --chocolate: #493329;
+    --text: #453b34;
+    --muted: #8d8075;
+    --border: #e8dccb;
+    --red: #a94f49;
+    --red-hover: #893c37;
+    --gold: #d5a64a;
+    --green: #66836a;
+    --radius: 14px;
+    --shadow: 0 4px 16px rgba(73, 51, 41, 0.07);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Header */
+
+header {
+    background: var(--chocolate);
+    padding: 16px 24px;
+    text-align: center;
+}
+
+.logo::before {
+    content: "🍪 RUDORFLE";
+    color: #fff8eb;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+/* Main layout */
+
+main {
+    width: min(100% - 32px, 620px);
+    margin: 40px auto 80px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(38px, 8vw, 54px);
+    color: var(--chocolate);
+    text-align: center;
+    margin: 0 0 12px;
+    letter-spacing: -1.5px;
+}
+
+main > p:not(#score) {
+    margin: 8px 0;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+/* Game instructions */
+
+main > p:nth-of-type(1) {
+    color: var(--chocolate);
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* Cookie selection */
+
+form {
+    margin-top: 32px;
+}
+
+fieldset {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: 24px 20px 16px;
+    box-shadow: var(--shadow);
+    min-width: 0;
+}
+
+legend {
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-weight: bold;
+    color: var(--chocolate);
+    padding: 0 12px;
+}
+
+/* Individual cookie rows */
+
+[data-quantity-row] {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 42px 42px 38px;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 8px;
+    border-bottom: 1px solid var(--border);
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+[data-quantity-row]:last-child {
+    border-bottom: none;
+}
+
+[data-quantity-row]:hover {
+    background: #faf5eb;
+}
+
+.option {
+    font-weight: 600;
+    color: var(--chocolate);
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+
+/* Quantity buttons */
+
+[data-quantity-row] button {
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #faf5eb;
+    color: var(--chocolate);
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+[data-quantity-row] button:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: white;
+}
+
+[data-quantity-row] button:active {
+    transform: scale(0.92);
+}
+
+[data-quantity-row] button:focus-visible,
+form > button:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+}
+
+/* Quantity display */
+
+output {
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+    color: var(--chocolate);
+    font-variant-numeric: tabular-nums;
+}
+
+/* Submit button */
+
+form > button[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 16px;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--red);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(169, 79, 73, 0.2);
+    transition: background 0.2s, transform 0.15s;
+}
+
+form > button[type="submit"]:hover {
+    background: var(--red-hover);
+    transform: translateY(-2px);
+}
+
+form > button[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* Score reveal */
+
+#score {
+    margin-top: 32px;
+    padding: 20px;
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    color: var(--chocolate);
+    font-family: Georgia, serif;
+    font-size: 17px;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+    min-height: 0;
+}
+
+#score:empty {
+    display: none;
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 420px) {
+    main {
+        margin-top: 24px;
+    }
+
+    fieldset {
+        padding: 20px 10px 12px;
+    }
+
+    [data-quantity-row] {
+        grid-template-columns: minmax(0, 1fr) 38px 38px 30px;
+        gap: 5px;
+        padding: 10px 4px;
+    }
+
+    [data-quantity-row] button {
+        width: 38px;
+        height: 38px;
+    }
+
+    .option {
+        font-size: 14px;
+    }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
