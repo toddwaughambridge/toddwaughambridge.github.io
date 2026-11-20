@@ -297,3 +297,10 @@ form > button[type="submit"]:active {
 #copy-score[hidden] {
     display: none;
 }
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}

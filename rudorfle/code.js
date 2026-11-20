@@ -142,7 +142,7 @@ function hash32(str) {
 }
 
 function mulberry32(a) {
-    let t = a += 0x6D2B79F5;
+    let t = a += 0x6D2B79F4;
     t = Math.imul(t ^ (t >>> 15), t | 1);
     t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
     return (((t ^ (t >>> 14)) >>> 0) / 4294967296)
@@ -262,17 +262,24 @@ document.addEventListener("submit", (event) => {
         }
         purchases += quan.value * 1;
     })
-    
-    var score = 0;
-    if (cost <= 1000) {
-        score = cost;
-        // if (shops.length > 1) {
-        //     score += (shops.length - 1) * 20;
-        // }
-        if (options > 1) {
-            score += (options - 1) * 25;
-        }
-        score += purchases;
-    }
-    revealScore(cost, score);
+
+	if (options > 0) {
+		event.target.querySelector('button[type="submit"]').disabled = true;
+		event.target.querySelectorAll('[data-quantity-row] button').forEach(button => {
+			button.disabled = true;
+		});
+		
+		var score = 0;
+		if (cost <= 1000) {
+			score = cost;
+			// if (shops.length > 1) {
+			//     score += (shops.length - 1) * 20;
+			// }
+			if (options > 1) {
+				score += (options - 1) * 25;
+			}
+			score += purchases;
+		}
+		revealScore(cost, score);
+	}
 });
